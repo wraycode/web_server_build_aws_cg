@@ -16,6 +16,6 @@
  chown root:root /home/$USERNAME
  chmod 700 /home/$USERNAME/.ssh
  chmod 644 /home/$USERNAME/.ssh/authorized_keys
- passwd $USERNAME | Circle120#!
+ passwd $USERNAME 
  sed "1 a  ${KEY}" /home/$USERNAME/.ssh/authourized_keys
  
