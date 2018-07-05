@@ -21,3 +21,4 @@ sudo chmod 700 /home/$USERNAME/.ssh
 sudo chmod 644 /home/$USERNAME/.ssh/authorized_keys
 sudo passwd $USERNAME
 sudo sed "1 a  ${KEY}" /home/$USERNAME/.ssh/authorized_keys
+sudo usermod --shell /bin/bash $USERNAME
