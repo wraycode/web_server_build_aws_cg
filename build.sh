@@ -48,5 +48,8 @@
      sudo phpenmod pdo_mysql
      sudo phpenmod zip
      sudo service apache2 restart
-
-     ./add_admin.sh
+     
+     # call ruby script to parse admin_list.json
+     # add keys to authorized_keys
+     sudo ./add_admins.rb
+     

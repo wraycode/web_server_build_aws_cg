@@ -18,6 +18,3 @@
    sudo touch /home/$USERNAME/.ssh/authorized_keys
    sudo chmod 700 /home/$USERNAME/.ssh
    sudo chmod 644 /home/$USERNAME/.ssh/authorized_keys
-
-   # ADD KEY TO AUTHORIZED KEYS
-   #sudo ruby add_admins.rb
