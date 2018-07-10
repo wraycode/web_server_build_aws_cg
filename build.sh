@@ -52,4 +52,6 @@
      # call ruby script to parse admin_list.json
      # add keys to authorized_keys
      sudo ./add_admins.rb
-     
+
+     # configure Apache and web directory
+     sudo ./configure_webserver.rb
