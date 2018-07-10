@@ -14,7 +14,7 @@ end
 projectRepository = prompt "Enter Project Repository: "
 print projectRepository+"\n\r"
 system("rm /var/www/html/*")
-system("cd /var/www/html/")
+Dir.chdir "/var/www/html/"
 status = system("git clone "+projectRepository+"")   
    
 web_root = system("ls /var/www/html")  
