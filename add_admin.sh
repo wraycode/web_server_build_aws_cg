@@ -20,4 +20,4 @@
    sudo chmod 644 /home/$USERNAME/.ssh/authorized_keys
 
    # ADD KEY TO AUTHORIZED KEYS
-   sudo ruby add_admins.rb
+   #sudo ruby add_admins.rb
