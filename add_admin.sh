@@ -2,10 +2,8 @@
  ## TAKES PUBLIC KEY and USERNAME
 
    USERNAME="$1"
-   KEY="$2"
 
    echo "USER = $USERNAME"
-   echo "KEY =  $KEY"
 
    # ADD USER
    sudo adduser $USERNAME
@@ -22,4 +20,4 @@
    sudo chmod 644 /home/$USERNAME/.ssh/authorized_keys
 
    # ADD KEY TO AUTHORIZED KEYS
-   sudo sed "1 a  ${KEY}" /home/$USERNAME/.ssh/authorized_keys
+   sudo ruby add_admins.rb

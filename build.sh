@@ -28,7 +28,7 @@
 
      ## start install php ##
      sudo apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-xml php7.0-mbstring php7.0-curl php7.0-mcrypt \
-	     php-imagick php7.0-gd php-memcache php7.0-xmlrpc php7.0-zip
+	     php-imagick php7.0-gd php-memcache php7.0-xmlrpc php7.0-zip ruby 
 
      ## install compser ##
      curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
@@ -48,3 +48,5 @@
      sudo phpenmod pdo_mysql
      sudo phpenmod zip
      sudo service apache2 restart
+
+     ./add_admin.sh
