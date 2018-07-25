@@ -23,4 +23,18 @@ print web_root
 
 system('sudo sed -i "/DocumentRoot/c\        DocumentRoot /var/www/html/'+web_root+'" /etc/apache2/sites-available/000-default.conf')
 system('sudo sed -e "/DocumentRoot /var/www/html/'+web_root+'/a\" -e "ServerName '+serverName+'" /etc/apache2/sites-available/000-default.conf')
+system('sudo service apache2 restart')
 
+print 'setting up letsencrypt ssl certs'
+openedPorts =promt "Certbot needs to have access to the server. Have the ports been opened up for http and https? (y/n)"
+if openedPorts.downcase == 'y' then
+	system('sudo ./letsEncrypt')
+else
+	puts "Ports will need to be opened before Certbot can setup the ssl certificates"
+end	
+
+Dir.chdir web_root
+system('composer install')
+
+#print "setting up apache basic authintication"
+#system('sudo apt-get install apache2-utils')
