@@ -1,16 +1,13 @@
 #!/usr/bin/ruby
 require 'json'
 
-
-
-
 def prompt(*args)
   print(*args)
   result = gets.strip
   return result.empty? ? 'error' : result
 end
 
-serverName = prompt "Enter serverName: "
+#serverName = prompt "Enter serverName: "
 #print serverName+"\n\r"
 #projectRepository = prompt "Enter Project Repository: "
 #print projectRepository+"\n\r"
@@ -32,9 +29,9 @@ print web_root
 #else
 #	puts "Ports will need to be opened before Certbot can setup the ssl certificates"
 #end	
-
-Dir.chdir web_root
+puts Dir.getwd
+system("sudo chown -R www-data:www-data /var/www/html/#{web_root}")
+Dir.chdir(web_root.chomp)
 system('composer install')
-
 #print "setting up apache basic authintication"
 #system('sudo apt-get install apache2-utils')
