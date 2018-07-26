@@ -11,7 +11,7 @@ for admin in admins
 	    auth_file = File.open("/home/"+admin['name']+"/.ssh/authorized_keys",'a')
 	    auth_file.write(admin['key'])    
 	    auth_file.close
-	    system("sudo chown -R "+admin['name']+":"+admin['name']+"/home/"+admin['name']+"/.ssh/authorized_keys")   
+	    system("sudo chown -R "+admin['name']+":"+admin['name']+" /home/"+admin['name']+"/.ssh/authorized_keys")   
 	end    
 end    
 
