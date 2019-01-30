@@ -11,7 +11,7 @@
 
  ## update /etc/hosts hostname ##
  etchostL1=`head -1 /etc/hosts`
- if [ "$etZZchostL1" = "127.0.0.1 localhost" ]; then
+ if [ "$etchostL1" = "127.0.0.1 localhost" ]; then
 	     sudo sed -i "/127.0.0.1 localhost/c\127.0.0.1 localhost ${HOSTNAME}" /etc/hosts
      fi
 
